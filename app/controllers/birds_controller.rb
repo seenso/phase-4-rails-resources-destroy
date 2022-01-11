@@ -34,6 +34,7 @@ class BirdsController < ApplicationController
   end
 
   # PATCH /birds/:id/like
+  # Endpoint is /birds/:id, but the body should have a "like" key *see last lab*
   def increment_likes
     bird = Bird.find_by(id: params[:id])
     if bird
